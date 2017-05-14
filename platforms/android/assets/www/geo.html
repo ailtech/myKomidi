@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+        <meta charset="UTF-8">
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- Latest compiled and minified CSS -->
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <!--NavBars-->
+        <nav>
+            <div class="amber darken-1 nav-wrapper">
+                <a href="#!" class="brand-logo center">MyKomidi</a>
+                <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="left hide-on-med-and-down grey-text text-darken-4 ">
+                    <li><a href="Index.spectacle.html"><i class="left material-icons">theaters</i>Nos Spectacles</a></li>
+                    <li><a href="sallelist.html"><i class="left material-icons">store</i>Nos Salles</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile">
+                    <li><a href="Index.spectacle.html"><i class="left material-icons">theaters</i>Nos Spectacles</a></li>
+                    <li><a href="sallelist.html"><i class="left material-icons">store</i>Nos Salles</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!--Body-->
+        <div class="container-fluid">
+                <div id="modalInfo" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">MyKomidi Information.</h4>
+            </div>
+            <div class="modal-body">
+                <p id="texteModal">Gaia.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+
+    </div>
+  </div>
+
+<div id="map" style="width: 100%; height: 380px"></div>
+            <p style="display: none;" id="texteSpec">Spectacle <span id="nomSpec"></span>, jouer dans la salle:<span id="nomSalle"></span></p>
+            <button id="modeV" val="6">Tracer itinéraire vers salle en voiture</button>
+
+        </div>
+        
+        
+        
+        
+      <!--Imports-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=false&language=fr" type="text/javascript"></script>
+        <script type="text/javascript" src="js/geo.js">
+
+        </script>
+      <script type="text/javascript" src="js/App.js"></script>
+
+
+
+        <footer class="page-footer">
+            <p class="center-align">Projet rÃ©alisÃ© Ã  titre Ã©ducatif dans le cadre d'un exercice fait par des Ã©lÃ¨ves de BTS</p>
+            <div class="footer-copyright">
+                <div class="container center-align">
+                    <p>Â© Copyright 2017 Robert Steven - Lucas Perez - Alexandre Lefevre</p>
+                </div>
+            </div>
+
+    </body>
+  </html>
