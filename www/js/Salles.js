@@ -2,7 +2,7 @@ $(".button-collapse").sideNav();
 $(document).ready(function(){
     $.ajax({
 
-        url : 'http://komidi.alwaysdata.net//api/index.php?action=apiGetAllSalle&key=31bed188884e193d8465226',
+        url : ' ',
 
         type : 'GET',
 

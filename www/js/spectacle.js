@@ -29,25 +29,36 @@ $(document).ready(function(){
                 //on regarde si le json renvoyer et corrrecte
                 //alert( retour.etat );
                 //console.dir( retour );
-                if (!retour.etat) {
-                    //cas ou erreur dans json
-                    //alert( retour.message );
-                    alert(retour.message);
-                } else {
+                if (retour.etat) {
                     //traitement
                     var o = retour.reponse.resultat;
 
-                    console.dir( id_spec );
+                    console.dir(id_spec);
                     var test = "tooto";
-                    console.dir( o[0].titre );
-                    var titre =o[0].titre ;
-                    var image = "<img  width='123' src="+ o[0].photo +">" ;
-                    console.dir( image );
+                    console.dir(o[0].titre);
+                    var titre = o[0].titre;
+                    var image = "<img  width='123' src=" + o[0].photo + ">";
+                    console.dir(image);
                     var resu_long = o[0].resume_long;
-                    var duree = o[0].duree+" min"  ;
-                    var auteur = o[0].acteur ;
-                    var nomsalle =o[0].nom_salle ;
-                    var liengeo =  "<p style='text-align: center;'>"+nomsalle+" <a  class='waves-effect waves-light btn'href='geo.html?idSpetacle=" +id_spec+ "'>geo spectacle</a></p>" ;
+                    var duree = o[0].duree + " min";
+                    var auteur = o[0].acteur;
+                    var nomsalle = o[0].nom_salle;
+                    var liengeo = " <a class='waves-effect waves-light btn' href='geo.html?idSpetacle=" + id_spec + "'>geolocalisation</a>";
+                    var tcorp= [
+
+                        '<thead> ',
+                        '<TH colspan=3  ><h5> ' + titre + '</h5></TH>',
+
+                        '</thead> ',
+                        '<tbody>',
+                        '<td><img  width="123" src="' + o[0].photo + '"></td><td><ul class="list-unstyled"><li><p>Durée : ' + duree + '</p></li><li><p>auteur :  ' + auteur + '</p></li></ul></td>',
+
+                        '<TR><td colspan=2><h5>Synopsis</h5></td></TR>',
+                        '<TR><td colspan=3 ><p align="left">' + resu_long + '</p></td></TR>',
+                        '<TR><td colspan=2><p> la salle de :  ' + nomsalle + '</p></td></TR>',
+                        '<TR><td><p>Itineraire de la salle :</p></td><td>'+ liengeo + '</td></TR>',
+                        '</tbody>'
+                    ];
 
 
                     $("#imagespec").html(image);
@@ -55,12 +66,11 @@ $(document).ready(function(){
                     $("#auteurspec").html(auteur);
                     $("#dureespec").html(duree);
                     $("#boutongeospec").html(liengeo);
+                    $("#nomsallespec").html(nomsalle);
 
-
-
+                    $("#test").html(tcorp);
 
                     $("#titrespec").html(titre);
-
                     /*
                      for(var i=0; i <= retour.length; i++){
                      var titre =  retour.reponse.resultat[i].titre;
@@ -68,6 +78,11 @@ $(document).ready(function(){
                      $("#texteTitre").html($("#texteTitre").html()+titre+"<br>");
                      }
                      */
+                }
+                else {
+                    //cas ou erreur dans json
+                    //alert( retour.message );
+                    alert(retour.message);
                 }
             }
             else{
