@@ -31,7 +31,7 @@ $(document).ready(function(){
 
                     for (a in o) {
                         id_spec = o[i].id_spe;
-                        console.dir(o[i].id_spe);
+                        //console.log(o[i].id_spe);
                         //language=HTML
                         test += ['<thead> ',
                             '<TH colspan=2  > <h5> ' + o[i].titre + '</h5></TH>',

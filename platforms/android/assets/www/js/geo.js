@@ -4,7 +4,7 @@
 
 $(document).ready(function(){
     $.support.cors=true;
-    $.mobile.allowCrossDomainPages = true;
+    //$.mobile.allowCrossDomainPages = true;
     /*
     //----------------Fonction qui affiche des message------------------------------
     function toStringInfo( msg ){

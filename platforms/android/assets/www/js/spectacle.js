@@ -33,12 +33,12 @@ $(document).ready(function(){
                     //traitement
                     var o = retour.reponse.resultat;
 
-                    console.dir(id_spec);
+                    //console.log(id_spec);
                     var test = "tooto";
-                    console.dir(o[0].titre);
+                    //console.log(o[0].titre);
                     var titre = o[0].titre;
                     var image = "<img  width='123' src=" + o[0].photo + ">";
-                    console.dir(image);
+                    //console.log(image);
                     var resu_long = o[0].resume_long;
                     var duree = o[0].duree + " min";
                     var auteur = o[0].acteur;

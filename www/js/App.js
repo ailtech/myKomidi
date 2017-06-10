@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $(".button-collapse").sideNav();
     var version = 1;
     //console.log(version);
     $.ajax({
@@ -13,7 +14,7 @@ $(document).ready(function(){
             //console.log("retour: "+retour);
             if( retour.message == "Votre application n'est pas à jour." ){
 
-                $("#miseajour").html("<a class='btn btn-floating btn-large right pulse' href='maj.html' style='margin:10px 10px 0px 0px;'><i class='material-icons'>info_outline</i></a>");
+                $("#miseajour").html("<a href='maj.html'><img class='btn btn-floating right pulse'  src='image/maj.png' style='margin:10px 10px 0px 0px;'/></a>");
                 //console.log("ok");
                 //console.log(descriptif+'|'+lien+'|'+version);
 
